@@ -18,7 +18,7 @@ Here's what you'll need to know before contributing:
 
 So you've decided that you know our tech,
 
-![pewds](https://media1.tenor.com/images/ecedecd45958c923a44a20bb04e1997c/tenor.gif?itemid=10722056)
+![pewds](https://media1.tenor.com/images/27cb1dccde88ca25dde3529325443e59/tenor.gif?itemid=10820228)
 
 1. Fork the repository and clone it to you local machine
 2. Create a virtual environment in the repository's directory and activate the virtual environment
@@ -32,6 +32,7 @@ source attendee-application/bin/activate
 ```
 pip install django
 pip install djangorestframework
+pip install coreapi
 pip install psycopg2
 # You can also use the pip3 command to insure that you get the python3 variants of the packages
 ```
