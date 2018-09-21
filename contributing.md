@@ -25,15 +25,16 @@ So you've decided that you know our tech,
 2. Create a virtual environment in the repository's directory and activate the virtual environment
 
 ``` 
-venv attendee-application
+virtualenv att-app
 
-source attendee-application/bin/activate
+source att-app/bin/activate
 ```
 3. Install the dependencies
 ```
 pip install django
 pip install djangorestframework
-pip install psycopg2
+pip install coreapi
+pip install psycopg2-binary
 # You can also use the pip3 command to insure that you get the python3 variants of the packages
 ```
 4. Open the activate script of your virtual environment
@@ -50,6 +51,7 @@ deactivate() {
     ...
     #Unset variables
     unset ENV_VARIABLE
+    unset SECRET_KEY
 }
 # go to the end of the activate script and set the environment variable
 export ENV_VARIABLE = 'Please use environment variables for API keys and keys in general'
@@ -57,7 +59,7 @@ export ENV_VARIABLE = 'Please use environment variables for API keys and keys in
 6. Deactivate and reactivate the virtual environment so the environment variables will work
 ```
 deactivate 
-source attendee-application/bin/activate
+source att-app/bin/activate
 ```
 7. Make sure to migrate the database so you have the proper endpoints
 ``` 

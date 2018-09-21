@@ -13,6 +13,11 @@ class ApplicationSerializer(serializers.HyperlinkedModelSerializer):
         'city', 'dietary_restrictions', 'allergies', 'github', 'linkedin',
         'personal_website', 'resume', 'short_answer', 'gender', 'ethnicity',
         'anything_else', 'agreed')
+        read_only_fields = ('resume')
+class ResumeApplicationSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta: 
+        model = Application
+        fields = ('resume')
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
