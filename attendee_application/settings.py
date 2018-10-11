@@ -124,7 +124,11 @@ USE_TZ = True
 REST_FRAMEWORK = {
     'DEFAULT_PARSER_CLASSES': (
         'rest_framework.parsers.FileUploadParser',
-    )
+    ),
+    'TEST_REQUEST_RENDERER_CLASSES': (
+        'rest_framework.renderers.MultiPartRenderer',
+        'rest_framework.renderers.JSONRenderer',
+    ),
 }
 
 # Static files (CSS, JavaScript, Images)

@@ -17,6 +17,7 @@ class ApplicationSerializer(serializers.HyperlinkedModelSerializer):
     other_gender_field = serializers.CharField(allow_blank = True)
     other_ethnicity = serializers.CharField(allow_blank = True)
     anything_else = serializers.CharField(allow_blank = True)
+    resume = serializers.FileField(allow_empty_file = True)
 
     # Validators for fields
     def validate_github(self, value):
